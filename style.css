@@ -1,0 +1,296 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border_box;
+}
+
+html {
+  font-size: 16px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
+}
+
+.container{
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a{
+  text-decoration: none;
+}
+
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.brand h1 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 22px;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000000;
+  font-size: 16px;
+  line-height: 150%;
+  margin-bottom: 10px;
+}
+
+
+/* Hero Section */
+
+#hero {
+  background-image: url(ayaka.png);
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  z-index: 1;
+}
+
+#hero::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: .60;
+  z-index: -1;
+}
+
+#hero h1{
+  display: block;
+  width: fit-content;
+  font-size: 48px;
+  position: relative;
+  color: white;
+}
+
+#hero .hero{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  justify-content: center;
+  text-align: center;
+}
+
+#hero .cta{
+  display: inline-block;
+  margin-top: 20px;
+  padding: 16px 32px;
+  color:rgb(182, 127, 233);
+  background-color: transparent;
+  border: 2px solid rgb(204, 157, 248);
+  text-decoration: uppercase;
+  letter-spacing: 2px;
+  transition: .5s ease;
+  transition: .5s ease background-color;
+}
+
+#hero .cta:hover {
+  color: white;
+  background-color: rgb(204, 157, 248);
+
+}
+
+/* End Hero Section */
+
+/* activity Section */
+
+#activity .activity{
+  flex-direction: column;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+#activity .container{
+  min-height: 60vh;
+}
+
+#activity .activity-top{
+  width: 600px;
+  margin: 0 auto;
+  padding: 0 20px;
+  font-size: 25px;
+}
+
+#activity .activity-bottom{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+#activity .activity-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: rgb(204, 157, 248);
+  margin: 10px 5px;
+  flex-basis: 80%;
+}
+
+#activity .icon{
+  width: 170px;
+  height: 230px;
+  margin-bottom: 15px;
+}
+
+#activity h2{
+  font-size: 28px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+/* End activity Section */
+
+/* About Section */
+
+#about{
+  background-color: whitesmoke;
+}
+#about .about{
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+  margin:  0 auto;
+  padding: 100px 20px;
+  flex-direction: column-reverse;/*invertir */
+}
+
+#about .container{
+  min-height: 60vh;
+}
+
+#about .col-left{
+  width: 280px;
+  height: 400px;
+}
+
+#about .col-right{
+  width: 100%;
+}
+
+#about .col-right h2{
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: rgb(204, 157, 248);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+#about .col-left .about-img{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  margin-top: 20px;
+}
+/* End About Section */
+
+/* Footer Section */
+
+#footer {
+  background-color: rgb(204, 157, 248);
+}
+
+#footer .footer {
+  min-height: 150px;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+
+#footer p {
+  font-size: 14px;
+  color: white;
+  padding-top: 10px;
+}
+
+/* End Footer Section */
+
+/* Media for tablet */
+
+@media only screen and (min-width:768px) {
+  .cta {
+      font-size: 16px;
+      padding: 20px 60px;
+  }
+
+  h1.section-title {
+      font-size: 36px;
+  }
+
+  #hero h1 {
+      font-size: 60px;
+  }
+
+  #activity .activity-bottom .activity-item {
+      flex-basis: 45%;
+      margin: 2.5%;
+  }
+
+  #about .about {
+      flex-direction: row;
+  }
+
+  #about .col-left {
+      width: 600px;
+      height: 400px;
+      padding-left: 60px;
+  }
+
+  #about .col-right {
+      text-align: left;
+      padding-left: 30px;
+  }
+
+  #about .col-right h1 {
+      text-align: left;
+  }
+  
+}
+/* End Media for tablet*/
+
+
+/* Media for desktop*/
+@media only screen and (min-width:1200px) {
+
+  #activity .activity-bottom .activity-item {
+      flex-basis: 20%;
+      margin: 2%;
+  }
+
+ 
+  #about .col-right {
+      padding-left: 40px;
+  }
+
+  #about .col-right p {
+      width: 70%;
+  }
+
+} 
+/* End Media for desktop */
