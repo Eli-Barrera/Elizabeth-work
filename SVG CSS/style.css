@@ -1,0 +1,85 @@
+@keyframes example {
+    84%   {fill:rgb(0, 0, 0); left:0px; top:0px;}
+    86%   {fill:rgb(255, 255, 255); left:0px; top:0px;}
+    88%   {fill:rgb(0, 0, 0); left:0px; top:0px;}
+    90%   {fill:rgb(255, 255, 255); left:0px; top:0px;}
+    100% {fill:rgb(0, 0, 0); left:300px; top:0px;}
+  }
+
+
+ @keyframes relleno{ 
+    from{fill: black;}
+    to {fill: rgb(0, 246, 254);}
+
+ }
+    
+ @keyframes rotar{ 
+    from {transform: rotate(-90deg);}  
+    to {transform: rotate(270deg); fill: rgb(0, 246, 254);}
+            
+}
+
+body{
+    text-align: center;
+    margin: 0px;   
+    background-color: black;
+ 
+} 
+
+ 
+.container{
+  
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;  
+}
+
+.container2{
+    height: 20vh;
+    display: flex;
+    justify-content:end;
+    align-items: end;
+    margin: 0px;  
+}
+
+#Scaramouche{
+    margin: -200px;
+     height: 300px;
+     transition:  .2s;
+     fill:black;
+     stroke-width: 0px;
+     animation-name: relleno;
+     animation-duration: 6s;
+     animation-timing-function: linear;
+     animation-delay: .5s;
+     animation-iteration-count:infinite; 
+     animation-direction: backwards;
+}
+#Scaramouche:hover{
+    margin: -100px;
+    height: 500px;
+}
+
+#Wanderer{
+    fill: rgb(255, 255, 255);
+    width: 4000px;
+    height: 300px;
+    position: relative;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-direction: reverse;  
+}
+
+#Simbolo{
+    margin: auto;
+    fill: #ffffff;
+    opacity: 50%;
+    position: relative;
+    width: 250px;
+    
+    animation: rotar 4s linear 0s infinite forwards;
+    animation-direction: alternate-reverse;  
+}
